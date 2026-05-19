@@ -21,7 +21,7 @@ function Navbar() {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {["Features", "How It Works", "About"].map((l) => (
-            <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+            <a key={l} href={`#${l.toLowerCase().replaceAll(" ", "-")}`} className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
               {l}
             </a>
           ))}
@@ -41,7 +41,7 @@ function Navbar() {
       {open && (
         <div className="md:hidden border-t border-gray-100 px-4 py-4 space-y-3 bg-white">
           {["Features", "How It Works", "About"].map((l) => (
-            <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} onClick={() => setOpen(false)} className="block text-sm font-medium text-gray-600 py-1">
+            <a key={l} href={`#${l.toLowerCase().replaceAll(" ", "-")}`} onClick={() => setOpen(false)} className="block text-sm font-medium text-gray-600 py-1">
               {l}
             </a>
           ))}
@@ -289,7 +289,7 @@ function WaitlistForm() {
 
 function Footer() {
   return (
-    <footer className="py-10 border-t border-gray-100">
+    <footer id="about" className="py-10 border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: RED }}>
