@@ -6,3 +6,4 @@ dist
 .codegraph/
 .mcp.json
 tsconfig.tsbuildinfo
+bun.lock
